@@ -27,8 +27,40 @@ public class RandomUserGenerator {
         return faker.name().username();
     }
 
+    public String randomUserNameMoreLimit() {
+        return faker.lorem().characters(151);
+    }
+
+    public String randomUserWrongPassword() {
+        return "1111111111";
+    }
+
+    public String NullFirstname() {
+        return "";
+    }
+
+    public String NullLastname() {
+        return "";
+    }
+
+    public String NullEmail() {
+        return "";
+    }
+
+    public String NullPassword() {
+        return "";
+    }
+
+    public String NullUserName() {
+        return "";
+    }
+
     public User randomUser() {
-        return new User(randomFirstname(),randomLastname(),randomUserName(),randomEmail(),randomPassword());
+        return new User(randomFirstname(),randomLastname(),randomUserName(),randomEmail(),"Aidin1234!@");
+    }
+
+    public User nullUser () {
+        return new User(NullFirstname(),NullLastname(),NullUserName(),NullEmail(),NullPassword());
     }
 
 }
